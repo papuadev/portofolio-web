@@ -24,6 +24,8 @@ const formSchema = z.object({
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
+import { FadeIn } from "../atoms/FadeIn";
+
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -52,19 +54,19 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
+          <FadeIn className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Have a project in mind or want to discuss opportunities? I'd love to hear from you.
             </p>
-          </div>
+          </FadeIn>
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
-            <div className="space-y-8">
+            <FadeIn className="space-y-8" direction="right">
               <div>
                 <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
                 <a 
@@ -95,10 +97,10 @@ export function ContactSection() {
                   ))}
                 </div>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Contact Form */}
-            <div className="bg-card p-6 md:p-8 rounded-xl border shadow-sm">
+            <FadeIn className="bg-card p-6 md:p-8 rounded-xl border shadow-sm" direction="left" delay={200}>
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <FormField
@@ -157,7 +159,7 @@ export function ContactSection() {
                   </Button>
                 </form>
               </Form>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </div>

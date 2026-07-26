@@ -70,8 +70,11 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem; /* Offset for sticky navbar */
+  }
   body {
     @apply bg-background text-foreground font-sans;
-    scroll-behavior: smooth;
   }
 }

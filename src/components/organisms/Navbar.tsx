@@ -15,7 +15,9 @@ const navLinks = [
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const activeSection = useActiveSection(navLinks.map((link) => link.href.replace("#", "")));
+  const activeSection = useActiveSection(
+    navLinks.map((link) => link.href.replace("#", "")),
+  );
 
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
@@ -27,7 +29,9 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#hero" className="text-xl font-bold text-primary">JD.</a>
+            <a href="#hero" className="text-xl font-bold text-primary">
+              awp
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -58,7 +62,11 @@ export function Navbar() {
               aria-expanded={isMobileMenuOpen}
               aria-label="Toggle navigation"
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>

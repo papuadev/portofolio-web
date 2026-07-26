@@ -10,29 +10,29 @@ import type {
 } from "../types";
 
 export const siteMetadata: SiteMetadata = {
-  title: "John Doe | Full-Stack Developer",
-  description: "Personal portfolio of John Doe, a Full-Stack Developer.",
+  title: "Ali W Purbo | Full-Stack Developer",
+  description: "Personal portfolio of Ali W Purbo, a Full-Stack Developer.",
   themeColor: "#0066ff",
 };
 
 export const heroData: HeroData = {
-  name: "John Doe",
+  name: "Ali",
   jobTitle: "Full-Stack Web Developer",
-  avatarUrl: "/avatar.png",
+  avatarUrl: "/img/avatar-v2.png",
   greeting: "Building scalable and high-performance web solutions.",
   ctaText: "View Portfolio",
 };
 
 export const aboutData: AboutData = {
   description: [
-    "I am a passionate software engineer with a strong focus on building scalable web applications. I love solving complex problems and turning ideas into reality.",
-    "When I'm not coding, you can find me exploring new technologies, writing technical articles, or enjoying a good cup of coffee.",
+    "I am a passionate software engineer with a strong focus on building scalable web applications. I love coding & solving problems then turning ideas into code.",
+    "When I'm not coding, you can find me exploring new technologies, discovering technical articles, or enjoying a good cup of coffee.",
   ],
   coreValues: [
-    "Clean Code",
+    "Adaptability and Resilience",
     "Continuous Learning",
     "Effective Communication",
-    "Attention to Detail",
+    "Agile and Collaborative",
   ],
 };
 
@@ -42,7 +42,10 @@ export const skillsData: SkillCategory[] = [
     skills: [
       { name: "React", iconClass: "devicon-react-original colored" },
       { name: "TypeScript", iconClass: "devicon-typescript-plain colored" },
-      { name: "Tailwind CSS", iconClass: "devicon-tailwindcss-original colored" },
+      {
+        name: "Tailwind CSS",
+        iconClass: "devicon-tailwindcss-original colored",
+      },
       { name: "Next.js", iconClass: "devicon-nextjs-plain" },
     ],
   },
@@ -52,7 +55,7 @@ export const skillsData: SkillCategory[] = [
       { name: "Node.js", iconClass: "devicon-nodejs-plain colored" },
       { name: "Express", iconClass: "devicon-express-original" },
       { name: "PostgreSQL", iconClass: "devicon-postgresql-plain colored" },
-      { name: "MongoDB", iconClass: "devicon-mongodb-plain colored" },
+      { name: "mySQL", iconClass: "devicon-mysql-plain colored" },
     ],
   },
   {
@@ -60,7 +63,6 @@ export const skillsData: SkillCategory[] = [
     skills: [
       { name: "Git", iconClass: "devicon-git-plain colored" },
       { name: "Docker", iconClass: "devicon-docker-plain colored" },
-      { name: "AWS", iconClass: "devicon-amazonwebservices-plain-wordmark colored" },
     ],
   },
 ];
@@ -68,63 +70,90 @@ export const skillsData: SkillCategory[] = [
 export const portfolioData: PortfolioItem[] = [
   {
     id: "proj-01",
-    title: "E-Commerce Platform Redesign",
-    summary: "A complete overhaul of a legacy e-commerce platform using React and Node.js.",
-    thumbnailUrl: "",
+    title: "Gerakin - Health Event Management Platform",
+    summary:
+      "A full-stack web platform that enables health event organizers to create, manage, and sell event tickets with automated reservation, payment verification, and transaction workflows.",
+    thumbnailUrl: "/img/portofolio/gerakin-logo.png",
     technologies: [
       { name: "React", iconClass: "devicon-react-original colored" },
       { name: "Node.js", iconClass: "devicon-nodejs-plain colored" },
+      { name: "Express JS", iconClass: "devicon-express-original" },
       { name: "PostgreSQL", iconClass: "devicon-postgresql-plain colored" },
+      { name: "TypeScript", iconClass: "devicon-typescript-plain colored" },
+      { name: "Git", iconClass: "devicon-git-plain colored" },
+      { name: "Docker", iconClass: "devicon-docker-plain colored" },
     ],
     star: {
-      situation: "Client XYZ retail was losing mobile traffic due to a slow, outdated storefront.",
-      task: "Rebuild the entire frontend UI using modern React and Vite, with a scalable backend.",
-      action: "Implemented a responsive, mobile-first design using Tailwind CSS and optimized API endpoints.",
-      result: "Decreased bounce rate by 35% and improved mobile conversion rates by 20%.",
+      situation:
+        "Health event organizers needed an efficient way to manage event registrations, ticket sales, and manual payment verification while preventing overselling and abandoned transactions.",
+      task: "Develop a scalable event management platform with event discovery, secure checkout, voucher support, automated transaction handling, and organizer dashboards.",
+      action:
+        "Built a full-stack application featuring JWT authentication, event CRUD, debounced event search, seat reservation, voucher engine, manual payment upload, automated transaction expiration using cron jobs, and transactional database operations to maintain data integrity.",
+      result:
+        "Delivered a complete MVP that streamlines the entire event booking lifecycle, minimizes abandoned reservations through automated expiration, and provides organizers with efficient event and transaction management.",
     },
-    projectUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/papuadev/gerakin",
   },
   {
     id: "proj-02",
-    title: "Task Management SaaS",
-    summary: "A real-time collaborative task management tool for remote teams.",
-    thumbnailUrl: "",
+    title: "Presensi Web App",
+    summary:
+      "A Progressive Web App (PWA) for employee attendance using GPS validation, selfie verification, leave management, and real-time attendance monitoring.",
+    thumbnailUrl: "/img/portofolio/presensi-logo.png",
     technologies: [
-      { name: "Next.js", iconClass: "devicon-nextjs-plain" },
+      { name: "React", iconClass: "devicon-react-original colored" },
+      { name: "Node.js", iconClass: "devicon-nodejs-plain colored" },
+      { name: "Express JS", iconClass: "devicon-express-original" },
+      { name: "PostgreSQL", iconClass: "devicon-postgresql-plain colored" },
       { name: "TypeScript", iconClass: "devicon-typescript-plain colored" },
-      { name: "MongoDB", iconClass: "devicon-mongodb-plain colored" },
+      { name: "Git", iconClass: "devicon-git-plain colored" },
+      { name: "Docker", iconClass: "devicon-docker-plain colored" },
     ],
     star: {
-      situation: "A startup needed a way to manage cross-functional projects efficiently.",
-      task: "Build a real-time Kanban board with drag-and-drop functionality.",
-      action: "Utilized Next.js for SSR, WebSockets for real-time updates, and Tailwind for styling.",
-      result: "Successfully launched MVP in 3 months, acquiring 500+ active users in the first week.",
+      situation:
+        "Organizations required a modern attendance system to replace conventional attendance machines while reducing time fraud and simplifying workforce management across multiple branches.",
+      task: "Build a mobile-first Progressive Web App that supports GPS-based attendance, selfie verification, leave approval workflows, and centralized attendance management.",
+      action:
+        "Developed a PWA with geolocation validation, selfie capture with watermark, multi-location attendance support, leave approval workflow, branch-based roster management, dashboard analytics, and automated clock-out processing using scheduled background jobs.",
+      result:
+        "Delivered a centralized attendance platform that digitizes attendance workflows, improves attendance accuracy through GPS validation, and enables HR and supervisors to monitor employee attendance efficiently across multiple locations.",
     },
+    githubUrl: "https://github.com/papuadev/presensi-web-app",
   },
 ];
 
 export const experienceData: ExperienceItem[] = [
   {
     id: "exp-01",
-    role: "Senior Frontend Engineer",
-    company: "Tech Solutions Inc.",
-    duration: "Jan 2023 - Present",
+    role: "Information Technology Teacher",
+    company: "SMK Yapis Timika",
+    duration: "2017 - 2021",
     responsibilities: [
-      "Lead a team of 4 developers to build a modern analytics dashboard.",
-      "Improved frontend performance by 40% through code splitting and lazy loading.",
-      "Mentored junior developers and established code review best practices.",
+      "Taught programming, web development, databases, and computer networking to vocational high school students.",
+      "Designed project-based learning materials and guided students in developing real-world web applications.",
+      "Mentored students for competency assessments and IT competitions while providing technical consultation for school IT initiatives.",
     ],
   },
   {
     id: "exp-02",
-    role: "Full-Stack Developer",
-    company: "Digital Agency Web",
-    duration: "Mar 2021 - Dec 2022",
+    role: "IT Support",
+    company: "PT Bina Pertiwi Site Freeport",
+    duration: "2021 - Present",
     responsibilities: [
-      "Developed custom web applications for various enterprise clients.",
-      "Integrated third-party APIs and payment gateways.",
-      "Maintained and updated legacy PHP applications.",
+      "Provided end-user technical support by troubleshooting hardware, software, network, and printer issues.",
+      "Installed, configured, and maintained Windows workstations, enterprise applications, and peripheral devices.",
+      "Managed user accounts, performed preventive maintenance, and ensured IT systems remained operational with minimal downtime.",
+    ],
+  },
+  {
+    id: "exp-03",
+    role: "Full Stack Web Developer (Freelance)",
+    company: "Self-employed",
+    duration: "2019 - Present",
+    responsibilities: [
+      "Designed and developed full-stack web applications using React, Node.js, Express.js, and PostgreSQL.",
+      "Built RESTful APIs, implemented authentication and role-based access control, and integrated third-party services.",
+      "Collaborated with clients to gather requirements, deliver scalable solutions, and provide ongoing maintenance and feature enhancements.",
     ],
   },
 ];
@@ -132,29 +161,31 @@ export const experienceData: ExperienceItem[] = [
 export const testimonialsData: TestimonialItem[] = [
   {
     id: "test-01",
-    name: "Sarah Jenkins",
-    role: "Product Manager at Tech Solutions",
-    quote: "John is an exceptional engineer. His attention to detail and ability to translate complex requirements into intuitive UI is unparalleled.",
+    name: "Ony Mahendra",
+    role: "Part Analyst at PT U******* T******",
+    quote:
+      "Ali is an exceptional engineer. His attention to detail and ability to translate complex requirements into intuitive UI is unparalleled.",
   },
   {
     id: "test-02",
-    name: "Michael Brown",
-    role: "CEO at Digital Agency",
-    quote: "Working with John was a breeze. He always delivered high-quality code on time and was a great team player.",
+    name: "Rifki Aulia",
+    role: "BAS at PT B****** P******",
+    quote:
+      "Working with Ali was a breeze. He always delivered code on time and was a great team player.",
   },
 ];
 
 export const contactData: ContactData = {
-  email: "hello@johndoe.com",
+  email: "ali.wpurbo@gmail.com",
   socialLinks: [
     {
       platform: "LinkedIn",
-      url: "https://linkedin.com",
+      url: "https://linkedin.com/in/aliwpurbo",
       iconClass: "devicon-linkedin-plain colored",
     },
     {
       platform: "GitHub",
-      url: "https://github.com",
+      url: "https://github.com/papuadev",
       iconClass: "devicon-github-original",
     },
   ],
