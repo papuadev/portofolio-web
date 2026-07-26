@@ -21,7 +21,9 @@ import { Loader2, Mail } from "lucide-react";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+  message: z
+    .string()
+    .min(10, { message: "Message must be at least 10 characters." }),
 });
 
 import { FadeIn } from "../atoms/FadeIn";
@@ -60,7 +62,8 @@ export function ContactSection() {
           <FadeIn className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Have a project in mind or want to discuss opportunities? I'd love to hear from you.
+              Have a project in mind or want to discuss opportunities? I'd love
+              to hear from you.
             </p>
           </FadeIn>
 
@@ -68,8 +71,10 @@ export function ContactSection() {
             {/* Contact Info */}
             <FadeIn className="space-y-8" direction="right">
               <div>
-                <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
-                <a 
+                <h3 className="text-xl font-semibold mb-4">
+                  Contact Information
+                </h3>
+                <a
                   href={`mailto:${contactData.email}`}
                   className="flex items-center gap-3 text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
                 >
@@ -100,9 +105,16 @@ export function ContactSection() {
             </FadeIn>
 
             {/* Contact Form */}
-            <FadeIn className="bg-card p-6 md:p-8 rounded-xl border shadow-sm" direction="left" delay={200}>
+            <FadeIn
+              className="bg-card p-6 md:p-8 rounded-xl border shadow-sm"
+              direction="left"
+              delay={200}
+            >
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-6"
+                >
                   <FormField
                     control={form.control}
                     name="name"
@@ -110,7 +122,11 @@ export function ContactSection() {
                       <FormItem>
                         <FormLabel>Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" {...field} disabled={isSubmitting} />
+                          <Input
+                            placeholder="Andre Pirlo"
+                            {...field}
+                            disabled={isSubmitting}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -123,7 +139,12 @@ export function ContactSection() {
                       <FormItem>
                         <FormLabel>Email</FormLabel>
                         <FormControl>
-                          <Input type="email" placeholder="john@example.com" {...field} disabled={isSubmitting} />
+                          <Input
+                            type="email"
+                            placeholder="andrea.pirlo@mail.com"
+                            {...field}
+                            disabled={isSubmitting}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -136,10 +157,10 @@ export function ContactSection() {
                       <FormItem>
                         <FormLabel>Message</FormLabel>
                         <FormControl>
-                          <Textarea 
-                            placeholder="Tell me about your project..." 
-                            className="min-h-[120px]" 
-                            {...field} 
+                          <Textarea
+                            placeholder="Tell me about your project..."
+                            className="min-h-[120px]"
+                            {...field}
                             disabled={isSubmitting}
                           />
                         </FormControl>
@@ -147,7 +168,11 @@ export function ContactSection() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  <Button
+                    type="submit"
+                    className="w-full"
+                    disabled={isSubmitting}
+                  >
                     {isSubmitting ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />

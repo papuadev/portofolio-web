@@ -29,8 +29,12 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#hero" className="text-xl font-bold text-primary">
-              awp
+            <a href="#hero" className="flex items-center gap-2">
+              <img
+                src="/img/logo-awp.webp"
+                alt="Logo"
+                className="h-6 w-auto object-contain"
+              />
             </a>
           </div>
 
