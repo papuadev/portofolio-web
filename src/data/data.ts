@@ -18,7 +18,7 @@ export const siteMetadata: SiteMetadata = {
 export const heroData: HeroData = {
   name: "Ali",
   jobTitle: "Full-Stack Web Developer",
-  avatarUrl: "/img/avatar-v2.png",
+  avatarUrl: "/img/avatar.webp",
   greeting: "Building scalable and high-performance web solutions.",
   ctaText: "View Portfolio",
 };
@@ -73,7 +73,7 @@ export const portfolioData: PortfolioItem[] = [
     title: "Gerakin - Health Event Management Platform",
     summary:
       "A full-stack web platform that enables health event organizers to create, manage, and sell event tickets with automated reservation, payment verification, and transaction workflows.",
-    thumbnailUrl: "/img/portofolio/gerakin-logo.png",
+    thumbnailUrl: "/img/portofolio/gerakin-logo.webp",
     technologies: [
       { name: "React", iconClass: "devicon-react-original colored" },
       { name: "Node.js", iconClass: "devicon-nodejs-plain colored" },
@@ -99,7 +99,7 @@ export const portfolioData: PortfolioItem[] = [
     title: "Presensi Web App",
     summary:
       "A Progressive Web App (PWA) for employee attendance using GPS validation, selfie verification, leave management, and real-time attendance monitoring.",
-    thumbnailUrl: "/img/portofolio/presensi-logo.png",
+    thumbnailUrl: "/img/portofolio/presensi-logo.webp",
     technologies: [
       { name: "React", iconClass: "devicon-react-original colored" },
       { name: "Node.js", iconClass: "devicon-nodejs-plain colored" },

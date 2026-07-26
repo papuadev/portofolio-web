@@ -2,11 +2,13 @@ import { Button } from "@/components/ui/button";
 import { heroData } from "@/data/data";
 
 import { FadeIn } from "../atoms/FadeIn";
+import { CodingBackground } from "../atoms/CodingBackground";
 
 export function HeroSection() {
   return (
-    <section id="hero" className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 md:py-24 overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="hero" className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 md:py-24 overflow-hidden relative">
+      <CodingBackground />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-8">
           <FadeIn className="flex-1 text-center md:text-left space-y-6" direction="right">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
@@ -27,7 +29,10 @@ export function HeroSection() {
               </Button>
             </div>
           </FadeIn>
-          <FadeIn className="flex-1 flex justify-center md:justify-end" direction="left" delay={200}>
+          <FadeIn className="flex-1 flex justify-center md:justify-end relative" direction="left" delay={200}>
+            {/* Radial Gradient Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] md:w-[600px] md:h-[600px] bg-primary/30 dark:bg-primary/20 rounded-full blur-[80px] md:blur-[120px] -z-10 pointer-events-none" />
+
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
               {/* Added a solid background color as a fallback while the image loads */}
               <div className="absolute inset-0 bg-muted"></div>
