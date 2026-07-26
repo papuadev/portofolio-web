@@ -13,11 +13,11 @@ const navLinks = [
   { name: "Contact", href: "#contact" },
 ];
 
+const sectionIds = navLinks.map((link) => link.href.replace("#", ""));
+
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const activeSection = useActiveSection(
-    navLinks.map((link) => link.href.replace("#", "")),
-  );
+  const activeSection = useActiveSection(sectionIds);
 
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
