@@ -30,11 +30,14 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="#hero" className="flex items-center gap-2">
-              <img
-                src="/img/logo-awp.webp"
-                alt="Logo"
-                className="h-6 w-auto object-contain"
-              />
+              <picture>
+                <source media="(max-width: 767px)" srcSet="/img/logo-awp-mobile.webp" />
+                <img
+                  src="/img/logo-awp.webp"
+                  alt="Logo"
+                  className="h-6 w-auto object-contain"
+                />
+              </picture>
             </a>
           </div>
 

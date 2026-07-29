@@ -36,11 +36,14 @@ export function HeroSection() {
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
               {/* Added a solid background color as a fallback while the image loads */}
               <div className="absolute inset-0 bg-muted"></div>
-              <img
-                src={heroData.avatarUrl}
-                alt={heroData.name}
-                className="w-full h-full object-cover relative z-10"
-              />
+              <picture className="w-full h-full object-cover relative z-10 block">
+                <source media="(max-width: 767px)" srcSet="/img/avatar-mobile.webp" />
+                <img
+                  src={heroData.avatarUrl}
+                  alt={heroData.name}
+                  className="w-full h-full object-cover"
+                />
+              </picture>
             </div>
           </FadeIn>
         </div>
