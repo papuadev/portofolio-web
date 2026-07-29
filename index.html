@@ -5,6 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Preload Hero Images for LCP Optimization -->
+    <link rel="preload" as="image" href="/img/avatar-mobile.webp" media="(max-width: 767px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/img/avatar.webp" media="(min-width: 768px)" fetchpriority="high" />
+
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

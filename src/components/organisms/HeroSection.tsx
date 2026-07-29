@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { heroData } from "@/data/data";
 
-import { FadeIn } from "../atoms/FadeIn";
+
 import { CodingBackground } from "../atoms/CodingBackground";
 
 export function HeroSection() {
@@ -10,7 +10,7 @@ export function HeroSection() {
       <CodingBackground />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-8">
-          <FadeIn className="flex-1 text-center md:text-left space-y-6" direction="right">
+          <div className="flex-1 text-center md:text-left space-y-6 animate-in fade-in slide-in-from-left-8 duration-700 ease-out fill-mode-both">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
               Hi, I'm <span className="text-primary">{heroData.name}</span>
             </h1>
@@ -28,8 +28,8 @@ export function HeroSection() {
                 <a href="#contact">Contact Me</a>
               </Button>
             </div>
-          </FadeIn>
-          <FadeIn className="flex-1 flex justify-center md:justify-end relative" direction="left" delay={200}>
+          </div>
+          <div className="flex-1 flex justify-center md:justify-end relative animate-in fade-in slide-in-from-right-8 duration-700 ease-out fill-mode-both delay-200">
             {/* Radial Gradient Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] md:w-[600px] md:h-[600px] bg-primary/30 dark:bg-primary/20 rounded-full blur-[80px] md:blur-[120px] -z-10 pointer-events-none" />
 
@@ -42,10 +42,11 @@ export function HeroSection() {
                   src={heroData.avatarUrl}
                   alt={heroData.name}
                   className="w-full h-full object-cover"
+                  fetchPriority="high"
                 />
               </picture>
             </div>
-          </FadeIn>
+          </div>
         </div>
       </div>
     </section>
