@@ -97,7 +97,7 @@ export function ContactSection() {
                       className="w-12 h-12 rounded-full bg-card border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
                       title={link.platform}
                     >
-                      <i className={`${link.iconClass} text-2xl`}></i>
+                      <img src={link.iconUrl} alt={link.platform} className="w-6 h-6 object-contain dark:invert" />
                     </a>
                   ))}
                 </div>

@@ -21,6 +21,7 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
             src={testimonial.avatarUrl} 
             alt={testimonial.name} 
             className="w-12 h-12 rounded-full object-cover border-2 border-primary/20"
+            loading="lazy"
           />
         ) : (
           <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">

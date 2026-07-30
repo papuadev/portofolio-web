@@ -1,6 +1,6 @@
 export interface Technology {
   name: string;
-  iconClass: string;
+  iconUrl: string;
 }
 
 export interface PortfolioItem {
@@ -48,7 +48,7 @@ export interface AboutData {
 export interface SocialLink {
   platform: string;
   url: string;
-  iconClass: string;
+  iconUrl: string;
 }
 
 export interface ContactData {

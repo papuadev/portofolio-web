@@ -40,29 +40,29 @@ export const skillsData: SkillCategory[] = [
   {
     title: "Front-End",
     skills: [
-      { name: "React", iconClass: "devicon-react-original colored" },
-      { name: "TypeScript", iconClass: "devicon-typescript-plain colored" },
+      { name: "React", iconUrl: "/img/icons/react.svg" },
+      { name: "TypeScript", iconUrl: "/img/icons/typescript.svg" },
       {
         name: "Tailwind CSS",
-        iconClass: "devicon-tailwindcss-original colored",
+        iconUrl: "/img/icons/tailwindcss.svg",
       },
-      { name: "Next.js", iconClass: "devicon-nextjs-plain" },
+      { name: "Next.js", iconUrl: "/img/icons/nextjs.svg" },
     ],
   },
   {
     title: "Back-End",
     skills: [
-      { name: "Node.js", iconClass: "devicon-nodejs-plain colored" },
-      { name: "Express", iconClass: "devicon-express-original" },
-      { name: "PostgreSQL", iconClass: "devicon-postgresql-plain colored" },
-      { name: "mySQL", iconClass: "devicon-mysql-plain colored" },
+      { name: "Node.js", iconUrl: "/img/icons/nodejs.svg" },
+      { name: "Express", iconUrl: "/img/icons/express.svg" },
+      { name: "PostgreSQL", iconUrl: "/img/icons/postgresql.svg" },
+      { name: "mySQL", iconUrl: "/img/icons/mysql.svg" },
     ],
   },
   {
     title: "Tools & DevOps",
     skills: [
-      { name: "Git", iconClass: "devicon-git-plain colored" },
-      { name: "Docker", iconClass: "devicon-docker-plain colored" },
+      { name: "Git", iconUrl: "/img/icons/git.svg" },
+      { name: "Docker", iconUrl: "/img/icons/docker.svg" },
     ],
   },
 ];
@@ -75,13 +75,13 @@ export const portfolioData: PortfolioItem[] = [
       "A full-stack web platform that enables health event organizers to create, manage, and sell event tickets with automated reservation, payment verification, and transaction workflows.",
     thumbnailUrl: "/img/portofolio/gerakin-logo.webp",
     technologies: [
-      { name: "React", iconClass: "devicon-react-original colored" },
-      { name: "Node.js", iconClass: "devicon-nodejs-plain colored" },
-      { name: "Express JS", iconClass: "devicon-express-original" },
-      { name: "PostgreSQL", iconClass: "devicon-postgresql-plain colored" },
-      { name: "TypeScript", iconClass: "devicon-typescript-plain colored" },
-      { name: "Git", iconClass: "devicon-git-plain colored" },
-      { name: "Docker", iconClass: "devicon-docker-plain colored" },
+      { name: "React", iconUrl: "/img/icons/react.svg" },
+      { name: "Node.js", iconUrl: "/img/icons/nodejs.svg" },
+      { name: "Express JS", iconUrl: "/img/icons/express.svg" },
+      { name: "PostgreSQL", iconUrl: "/img/icons/postgresql.svg" },
+      { name: "TypeScript", iconUrl: "/img/icons/typescript.svg" },
+      { name: "Git", iconUrl: "/img/icons/git.svg" },
+      { name: "Docker", iconUrl: "/img/icons/docker.svg" },
     ],
     star: {
       situation:
@@ -101,13 +101,13 @@ export const portfolioData: PortfolioItem[] = [
       "A Progressive Web App (PWA) for employee attendance using GPS validation, selfie verification, leave management, and real-time attendance monitoring.",
     thumbnailUrl: "/img/portofolio/presensi-logo.webp",
     technologies: [
-      { name: "React", iconClass: "devicon-react-original colored" },
-      { name: "Node.js", iconClass: "devicon-nodejs-plain colored" },
-      { name: "Express JS", iconClass: "devicon-express-original" },
-      { name: "PostgreSQL", iconClass: "devicon-postgresql-plain colored" },
-      { name: "TypeScript", iconClass: "devicon-typescript-plain colored" },
-      { name: "Git", iconClass: "devicon-git-plain colored" },
-      { name: "Docker", iconClass: "devicon-docker-plain colored" },
+      { name: "React", iconUrl: "/img/icons/react.svg" },
+      { name: "Node.js", iconUrl: "/img/icons/nodejs.svg" },
+      { name: "Express JS", iconUrl: "/img/icons/express.svg" },
+      { name: "PostgreSQL", iconUrl: "/img/icons/postgresql.svg" },
+      { name: "TypeScript", iconUrl: "/img/icons/typescript.svg" },
+      { name: "Git", iconUrl: "/img/icons/git.svg" },
+      { name: "Docker", iconUrl: "/img/icons/docker.svg" },
     ],
     star: {
       situation:
@@ -181,12 +181,12 @@ export const contactData: ContactData = {
     {
       platform: "LinkedIn",
       url: "https://linkedin.com/in/aliwpurbo",
-      iconClass: "devicon-linkedin-plain colored",
+      iconUrl: "/img/icons/linkedin.svg",
     },
     {
       platform: "GitHub",
       url: "https://github.com/papuadev",
-      iconClass: "devicon-github-original",
+      iconUrl: "/img/icons/github.svg",
     },
   ],
 };

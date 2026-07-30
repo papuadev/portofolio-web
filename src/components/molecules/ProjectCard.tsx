@@ -1,4 +1,5 @@
 import type { PortfolioItem } from "@/types";
+import { cn } from "@/lib/utils";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
@@ -17,6 +18,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             src={project.thumbnailUrl} 
             alt={project.title} 
             className="w-full h-full object-cover"
+            loading="lazy"
           />
         ) : (
           <div className="w-full h-full bg-primary/20 flex flex-col items-center justify-center">
@@ -37,7 +39,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech, idx) => (
             <Badge key={idx} variant="secondary" className="flex items-center gap-1.5">
-              <i className={`${tech.iconClass} text-base`}></i>
+              <img 
+                src={tech.iconUrl} 
+                alt={tech.name} 
+                className={cn(
+                  "w-4 h-4 object-contain",
+                  ["Next.js", "Express", "Express JS"].includes(tech.name) && "dark:invert"
+                )} 
+              />
               {tech.name}
             </Badge>
           ))}
@@ -70,7 +79,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             rel="noopener noreferrer"
             className="text-sm font-medium flex items-center gap-1 text-muted-foreground hover:text-foreground hover:underline"
           >
-            <i className="devicon-github-original text-base"></i> Repository
+            <img src="/img/icons/github.svg" alt="GitHub" className="w-4 h-4 object-contain dark:invert" /> Repository
           </a>
         )}
       </CardFooter>
