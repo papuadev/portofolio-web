@@ -41,6 +41,8 @@ export function HeroSection() {
                 <img
                   src={heroData.avatarUrl}
                   alt={heroData.name}
+                  width="400"
+                  height="400"
                   className="w-full h-full object-cover"
                   fetchPriority="high"
                 />

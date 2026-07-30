@@ -6,7 +6,7 @@ export function CodingBackground() {
         
         {/* Floating Symbol 1 */}
         <div 
-          className="absolute text-primary/10 dark:text-primary/20 font-mono font-bold text-6xl md:text-8xl animate-float"
+          className="absolute text-primary/10 dark:text-primary/20 font-mono font-bold text-6xl md:text-8xl md:animate-float"
           style={{ top: "15%", left: "5%" }}
         >
           {"</>"}
@@ -14,7 +14,7 @@ export function CodingBackground() {
 
         {/* Floating Symbol 2 */}
         <div 
-          className="absolute text-muted-foreground/10 dark:text-muted-foreground/20 font-mono font-bold text-5xl md:text-7xl animate-float-reverse"
+          className="absolute text-muted-foreground/10 dark:text-muted-foreground/20 font-mono font-bold text-5xl md:text-7xl md:animate-float-reverse"
           style={{ top: "60%", left: "15%", animationDelay: "1s" }}
         >
           {"{ }"}
@@ -22,7 +22,7 @@ export function CodingBackground() {
 
         {/* Floating Symbol 3 */}
         <div 
-          className="absolute text-primary/10 dark:text-primary/20 font-mono font-bold text-7xl md:text-9xl animate-float"
+          className="absolute text-primary/10 dark:text-primary/20 font-mono font-bold text-7xl md:text-9xl md:animate-float"
           style={{ top: "25%", right: "10%", animationDelay: "2s" }}
         >
           {"()"}
@@ -30,7 +30,7 @@ export function CodingBackground() {
 
         {/* Floating Symbol 4 */}
         <div 
-          className="absolute text-muted-foreground/10 dark:text-muted-foreground/20 font-mono font-bold text-6xl md:text-8xl animate-float-reverse"
+          className="absolute text-muted-foreground/10 dark:text-muted-foreground/20 font-mono font-bold text-6xl md:text-8xl md:animate-float-reverse"
           style={{ top: "70%", right: "20%", animationDelay: "0.5s" }}
         >
           {"[]"}

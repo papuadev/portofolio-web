@@ -35,6 +35,8 @@ export function Navbar() {
                 <img
                   src="/img/logo-awp.webp"
                   alt="Logo"
+                  width="120"
+                  height="24"
                   className="h-6 w-auto object-contain"
                 />
               </picture>
