@@ -14,12 +14,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
       {/* Thumbnail Section */}
       <div className="w-full h-48 bg-primary/10 flex items-center justify-center overflow-hidden relative">
         {project.thumbnailUrl ? (
-          <img 
-            src={project.thumbnailUrl} 
-            alt={project.title} 
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+          <picture className="w-full h-full block">
+            {project.thumbnailUrlMobile && (
+              <source media="(max-width: 767px)" srcSet={project.thumbnailUrlMobile} />
+            )}
+            <img 
+              src={project.thumbnailUrl} 
+              alt={project.title} 
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </picture>
         ) : (
           <div className="w-full h-full bg-primary/20 flex flex-col items-center justify-center">
             <span className="text-4xl font-bold text-primary/50">

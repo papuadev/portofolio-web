@@ -8,6 +8,7 @@ export interface PortfolioItem {
   title: string;
   summary: string;
   thumbnailUrl?: string;
+  thumbnailUrlMobile?: string;
   technologies: Technology[];
   star: {
     situation: string;

@@ -74,6 +74,7 @@ export const portfolioData: PortfolioItem[] = [
     summary:
       "A full-stack web platform that enables health event organizers to create, manage, and sell event tickets with automated reservation, payment verification, and transaction workflows.",
     thumbnailUrl: "/img/portofolio/gerakin-logo.webp",
+    thumbnailUrlMobile: "/img/portofolio/gerakin-logo-mobile.webp",
     technologies: [
       { name: "React", iconUrl: "/img/icons/react.svg" },
       { name: "Node.js", iconUrl: "/img/icons/nodejs.svg" },
@@ -100,6 +101,7 @@ export const portfolioData: PortfolioItem[] = [
     summary:
       "A Progressive Web App (PWA) for employee attendance using GPS validation, selfie verification, leave management, and real-time attendance monitoring.",
     thumbnailUrl: "/img/portofolio/presensi-logo.webp",
+    thumbnailUrlMobile: "/img/portofolio/presensi-logo-mobile.webp",
     technologies: [
       { name: "React", iconUrl: "/img/icons/react.svg" },
       { name: "Node.js", iconUrl: "/img/icons/nodejs.svg" },
